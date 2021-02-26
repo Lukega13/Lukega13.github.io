@@ -6,8 +6,8 @@ const carouselContent = document.querySelector("div.carousel-items");
 let carouselContents = [
     {
         carousel_id: 'carousel-item-1',
-        img1: '../img/html.png',
-        img2: '../img/css.png',
+        img1: './img/html.png',
+        img2: './img/css.png',
         title: '&lt;Html & CSS&gt;',
         subtitle: 'Web Development',
         subitle2: 'Object-Oriented',
@@ -15,7 +15,7 @@ let carouselContents = [
     },
     {
         carousel_id: 'carousel-item-2',
-        img1: '../img/javascript.png',
+        img1: './img/javascript.png',
         title: '&lt;Javascript&gt;',
         subtitle: 'Web Development',
         subitle2: 'Object-Oriented',
@@ -23,7 +23,7 @@ let carouselContents = [
     },
     {
         carousel_id: 'carousel-item-3',
-        img1: '../img/css.png',
+        img1: './img/css.png',
         title: '&lt;Javascript&gt;',
         subtitle: 'Web Development',
         subitle2: 'Object-Oriented',
@@ -31,7 +31,7 @@ let carouselContents = [
     },
     {
         carousel_id: 'carousel-item-4',
-        img1: '../img/javascript.png',
+        img1: './img/javascript.png',
         title: '&lt;Javascript&gt;',
         subtitle: 'Web Development',
         subitle2: 'Object-Oriented',
@@ -39,7 +39,7 @@ let carouselContents = [
     },
     {
         carousel_id: 'carousel-item-5',
-        img1: '../img/javascript.png',
+        img1: './img/javascript.png',
         title: '&lt;Javascript&gt;',
         subtitle: 'Web Development',
         subitle2: 'Object-Oriented',
@@ -47,7 +47,7 @@ let carouselContents = [
     },
     {
         carousel_id: 'carousel-item-6',
-        img1: '../img/javascript.png',
+        img1: './img/javascript.png',
         title: '&lt;Javascript&gt;',
         subtitle: 'Web Development',
         subitle2: 'Object-Oriented',
@@ -188,34 +188,34 @@ const cardContent = [
     {
         title: "The Snake Game built with pure Javascript and some HTML & CSS",
         card_id: "card-1",
-        thumb: "../img/snake-banner.jpg",
+        thumb: "./img/snake-banner.jpg",
         url: "https://github.com/Lukega13/Snake"
     },
     {
         title: "Desvendando o CSS Grid na prática | Mayk Brito",
         card_id: "card-2",
-        thumb: "https://i.ytimg.com/vi/HN1UjzRSdBk/hqdefault.jpg"
+        thumb: "./img/snake-banner.jpg"
     },
     {
         title: "Array: Higher Order Functions | Mayk Brito",
         card_id: "card-3",
-        thumb: "https://i.ytimg.com/vi/rAzHvYnQ8DY/hqdefault.jpg"
+        thumb: "./img/snake-banner.jpg"
     },
     {
         title: "O que é API? REST e RESTful? | Mayk Brito",
         card_id: "card-4",
-        thumb: "https://i.ytimg.com/vi/ghTrp1x_1As/hqdefault.jpg"
+        thumb: "./img/snake-banner.jpg"
     },
     {
         title: "Desvendando a variável this no Javascript | Mayk Brito",
         card_id: "card-5",
-        thumb: "https://i.ytimg.com/vi/GSqR2i-Pq6o/hqdefault.jpg"
+        thumb: "./img/snake-banner.jpg"
     },
     {
         title:
             "Como usar Git e Github na prática: Guia para iniciantes | Mayk Brito",
         card_id: "card-6",
-        thumb: "https://i.ytimg.com/vi/2alg7MQ6_sI/hqdefault.jpg"
+        thumb: "./img/snake-banner.jpg"
     }
 ]
 
