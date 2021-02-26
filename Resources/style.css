@@ -314,7 +314,7 @@ button:focus {
 
 
 #skills-container {
-    background: linear-gradient(to bottom, white, #D3D3D3, white);
+    /* background: linear-gradient(to bottom, white, #D3D3D3, white); */
 }
 #skills {
     flex: 1;
