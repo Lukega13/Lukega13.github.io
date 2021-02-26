@@ -234,16 +234,6 @@ card.remove();
 
 
 // Load animations
-
-// const sr = ScrollReveal({
-//     origin: 'top',
-//     distance: '50px',
-//     duration: 700,
-//     reset: true
-// });
-// sr.reveal('#skills-header h1')
-// sr.reveal('#portifolio-header h1')
-
 const srBottom = ScrollReveal({
     origin: 'bottom',
     distance: '50px',
