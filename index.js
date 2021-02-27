@@ -10,7 +10,7 @@ let carouselContents = [
         img2: './img/css.png',
         title: '&lt;Html & CSS&gt;',
         subtitle: 'Web Development',
-        subitle2: 'Object-Oriented',
+        subitle2: 'Front-End',
         text: 'Modern websites and applications with responsive design and great UI/UX'
     },
     {
@@ -24,7 +24,7 @@ let carouselContents = [
     {
         carousel_id: 'carousel-item-3',
         img1: './img/css.png',
-        title: '&lt;Javascript&gt;',
+        title: '&lt;React&gt;',
         subtitle: 'Web Development',
         subitle2: 'Object-Oriented',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum tortor odio, aliquam posuere velit tincidunt non'
@@ -32,7 +32,7 @@ let carouselContents = [
     {
         carousel_id: 'carousel-item-4',
         img1: './img/javascript.png',
-        title: '&lt;Javascript&gt;',
+        title: '&lt;TypeScript&gt;',
         subtitle: 'Web Development',
         subitle2: 'Object-Oriented',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum tortor odio, aliquam posuere velit tincidunt non'
@@ -40,7 +40,7 @@ let carouselContents = [
     {
         carousel_id: 'carousel-item-5',
         img1: './img/javascript.png',
-        title: '&lt;Javascript&gt;',
+        title: '&lt;Next.js&gt;',
         subtitle: 'Web Development',
         subitle2: 'Object-Oriented',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum tortor odio, aliquam posuere velit tincidunt non'
@@ -48,7 +48,7 @@ let carouselContents = [
     {
         carousel_id: 'carousel-item-6',
         img1: './img/javascript.png',
-        title: '&lt;Javascript&gt;',
+        title: '&lt;Node.js & MySQL&gt;',
         subtitle: 'Web Development',
         subitle2: 'Object-Oriented',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum tortor odio, aliquam posuere velit tincidunt non'
@@ -137,14 +137,14 @@ function loopElements() { // get the last element and append it to the front
 
 let slideInterval = null
 
-// function interval(flag) {
-//     if (flag) {
-//         slideInterval = setInterval(goNext, 5000);
-//     } else {
-//         clearInterval(slideInterval)
-//     }
-// }
-// interval(true)
+function interval(flag) {
+    // if (flag) {
+    //     slideInterval = setInterval(goNext, 5000);
+    // } else {
+    //     clearInterval(slideInterval)
+    // }
+}
+interval(true)
 
 let slides = document.querySelectorAll('.carousel-items')
 let focusedSlide = 1
@@ -194,28 +194,28 @@ const cardContent = [
     {
         title: "Desvendando o CSS Grid na prática | Mayk Brito",
         card_id: "card-2",
-        thumb: "./img/snake-banner.jpg"
+        thumb: "./img/slide-4.jpg"
     },
     {
         title: "Array: Higher Order Functions | Mayk Brito",
         card_id: "card-3",
-        thumb: "./img/snake-banner.jpg"
+        thumb: "./img/slide-3.jpg"
     },
     {
         title: "O que é API? REST e RESTful? | Mayk Brito",
         card_id: "card-4",
-        thumb: "./img/snake-banner.jpg"
+        thumb: "./img/slide-2.jpg"
     },
     {
         title: "Desvendando a variável this no Javascript | Mayk Brito",
         card_id: "card-5",
-        thumb: "./img/snake-banner.jpg"
+        thumb: "./img/slide-1.jpg"
     },
     {
         title:
             "Como usar Git e Github na prática: Guia para iniciantes | Mayk Brito",
         card_id: "card-6",
-        thumb: "./img/snake-banner.jpg"
+        thumb: "./img/Perfil.jpeg"
     }
 ]
 
@@ -223,9 +223,8 @@ const cardContent = [
 cardContent.map(content => {
     const cardClone = card.cloneNode(true);
     cardClone.setAttribute("id", content.card_id);
-    cardClone.querySelector("img").src = content.thumb;
-    cardClone.querySelector(".title").innerHTML = content.title;
-    cardClone.querySelector(".see-more").setAttribute("href", content.url)
+    cardClone.querySelector(".card-image img").src = content.thumb;
+    cardClone.querySelector(".card-image").setAttribute("href", content.url)
     divCards.appendChild(cardClone);
 });
 
@@ -236,7 +235,7 @@ card.remove();
 // Load animations
 const srBottom = ScrollReveal({
     origin: 'bottom',
-    distance: '50px',
+    distance: '70px',
     duration: 1500,
     reset: true
 });
