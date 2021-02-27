@@ -82,7 +82,7 @@ let totalSlides = document.querySelectorAll(".carousel-items").length
 const carousel = document.querySelector('#carousel');
 const slider = document.querySelector('#carousel-inner');
 
-slider.style.width = `calc(100vw/3 * ${totalSlides} - 20px)`
+slider.style.width = `calc(100vw/3 * ${totalSlides})`
 document.querySelector('#slider-controls').style.height = `${document.querySelector('#skills').clientHeight}px`
 
 const next = document.querySelector('#carousel-next');
@@ -323,7 +323,6 @@ srBottom.reveal('#about-image')
 
 
 
-
 // Header Scroll
 window.addEventListener("scroll", stickyHeader)
 
@@ -333,8 +332,9 @@ function stickyHeader() {
     let sticky = header.offsetTop
 
     if (window.pageYOffset > sticky) {
+
         header.classList.add("fixed-header")
-        content.style.marginTop = '80px'
+        content.style.marginTop = `75px`
     } else {
         header.classList.remove("fixed-header")
         content.style.marginTop = '0px'
