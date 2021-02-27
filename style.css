@@ -521,7 +521,7 @@ button:focus {
 
 
 #footer {
-    background-color: #1C1C1C;
+    background-color: var(--grey-11);
     height: 60px;
     display: flex;
     align-items: center;
