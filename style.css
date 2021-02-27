@@ -36,6 +36,7 @@ body {
     --navbar: linear-gradient(to right,#363636, #1C1C1C);
     --background-home: radial-gradient(#C0C0C0, #A9A9A9);
     --background-carousel-items: #ffffff;
+    --sliders: #c0c0c0b8;
     --filter-button: #5e5e5f;
     --filter-button-checked: #afb2b2;
     --footer-color: #aeaeae;
@@ -82,30 +83,6 @@ a {
     border-bottom: 2px solid var(--color-black);
 }
 
-.slide-focus{
-    transform: scaleY(1.1);
-    transition: all 0.5s;
-}
-
-
-/*State settings*/
-.fixed-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-}
-
-.nav_link-active {
-    border-bottom: 1px solid var(--color-white);
-    padding-bottom: 4px !important;
-}
-
-@keyframes letterAnimation {
-    0% {transform: translateY(0px);}
-    50% {transform: translateY(-7px);}
-    100% {transform: translateY(0px);}
-}
 
 /*Individual settings*/
 
@@ -119,6 +96,13 @@ a {
     justify-content: space-between;
     padding: 0 3vw;
     user-select: none;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
 }
 
 #logo {
@@ -163,7 +147,7 @@ a {
     justify-content: center
 }
 #nav-urls ul li a {
-    padding: 6px 0;
+    padding: 7px 0;
     text-decoration: none;
     color: var(--color-white);
     font-size: 1.8rem;
@@ -171,9 +155,13 @@ a {
     cursor: pointer;
 }
 #nav-urls ul li a:hover {
-    padding-bottom: 4px;
+    padding: 4px 0;
     border-bottom: 1px solid var(--color-white);
     transition: .3s;
+}
+.nav_link-active {
+    border-bottom: 1px solid var(--color-white);
+    padding: 4px 0 !important;
 }
 
 
@@ -221,6 +209,11 @@ a {
     text-decoration: none;
 }
 
+@keyframes letterAnimation {
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(-7px);}
+    100% {transform: translateY(0px);}
+}
 #info-text span:hover {
     animation-name: letterAnimation;
     animation-duration: 0.6s;
@@ -323,7 +316,7 @@ a {
     text-align: justify;
 }
 #about-text h1 {
-    color: black;  
+    color: var(--color-black);  
     letter-spacing: 0.1rem;
     font-family: var(--font-body);
     font-size: 2.8rem;
@@ -387,11 +380,17 @@ a {
     max-height: 95px;
     width: 95px;
 }
+
+.slide-focus{
+    transform: scaleY(1.1);
+    transition: all 0.5s;
+}
 .slide-focus div img {
     height: 100px;
     max-height: 100px;
     width: 100px;
 }
+
 
 .carousel-title h1 {
     font-size: 2.8rem;
@@ -434,12 +433,24 @@ a {
     padding: 0 10px;
 }
 #slider-controls div {
-    width: 25px;
-    height: 25px;
-    background-color: black;
+    width: 40px;
+    height: 40px;
+    background-color: var(--sliders);
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
+}
+#slider-controls div img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background: var(--sliders);
+}
+#carousel-next img{
+    transform: translateX(1px);
+}
+#carousel-prev img {
+    transform: translateX(-1px);
 }
 
 

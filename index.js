@@ -83,7 +83,7 @@ const carousel = document.querySelector('#carousel');
 const slider = document.querySelector('#carousel-inner');
 
 slider.style.width = `calc(100vw/3 * ${totalSlides})`
-document.querySelector('#slider-controls').style.height = `${document.querySelector('#skills').clientHeight}px`
+document.querySelector('#slider-controls').style.height = `${document.querySelector('#carousel').clientHeight}px`
 
 const next = document.querySelector('#carousel-next');
 const prev = document.querySelector('#carousel-prev');
@@ -311,12 +311,13 @@ const srBottom = ScrollReveal({
 });
 
 srBottom.reveal('#carousel')
-srBottom.reveal('.card')
+srBottom.reveal('.cards')
 srBottom.reveal('#portifolio-filters')
 srBottom.reveal('#info-text')
 srBottom.reveal('#info-image')
 srBottom.reveal('#about-text')
 srBottom.reveal('#about-image')
+
 
 
 
