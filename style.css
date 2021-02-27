@@ -485,11 +485,12 @@ button:focus {
     margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); /*Era 250px*/
-    grid-gap: 25px; /*era 20px*/
+    grid-gap: 20px; /*era 20px*/
 }
   
 .card {
     height: 160px;
+    max-width: 250px;
     display: flex;
     flex-direction: column;
     background-color: #202020;
@@ -508,7 +509,7 @@ button:focus {
     height: inherit;
     width: 100%;
     overflow: hidden;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
   
 .card-image img {

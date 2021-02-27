@@ -188,33 +188,39 @@ const cardContent = [
     {
         title: "The Snake Game built with pure Javascript and some HTML & CSS",
         card_id: "card-1",
+        type: "javascript",
         thumb: "./img/snake-banner.jpg",
         url: "https://github.com/Lukega13/Snake"
     },
     {
         title: "Desvendando o CSS Grid na prática | Mayk Brito",
         card_id: "card-2",
+        type: "html",
         thumb: "./img/slide-4.jpg"
     },
     {
         title: "Array: Higher Order Functions | Mayk Brito",
         card_id: "card-3",
+        type: "react",
         thumb: "./img/slide-3.jpg"
     },
     {
         title: "O que é API? REST e RESTful? | Mayk Brito",
         card_id: "card-4",
+        type: "javascript",
         thumb: "./img/slide-2.jpg"
     },
     {
         title: "Desvendando a variável this no Javascript | Mayk Brito",
         card_id: "card-5",
+        type: "html",
         thumb: "./img/slide-1.jpg"
     },
     {
         title:
             "Como usar Git e Github na prática: Guia para iniciantes | Mayk Brito",
         card_id: "card-6",
+        type: "javascript",
         thumb: "./img/Perfil.jpeg"
     }
 ]
@@ -229,6 +235,70 @@ cardContent.map(content => {
 });
 
 card.remove();
+
+
+
+
+// Filters Skills
+document.getElementById("filters-all").addEventListener("click", () => { ativarFilters('all') })
+document.getElementById("filters-js").addEventListener("click", () => { ativarFilters('js') })
+document.getElementById("filters-html-css").addEventListener("click", () => { ativarFilters('html-css') })
+document.getElementById("filters-react").addEventListener("click", () => { ativarFilters('react') })
+
+window.onload = ativarFilters('all')
+
+function ativarFilters(botao) {
+    let buttons = document.getElementsByClassName("filters")
+
+    for (i = 0; i < 4; i++) {
+        buttons[i].childNodes[1].classList.remove("filter-checked")
+    }
+
+    document.getElementById("filters-" + botao).classList.add("filter-checked")
+}
+
+// Filters 
+document.getElementById("filters-all").addEventListener("click", () => { filter('all') })
+document.getElementById("filters-js").addEventListener("click", () => { filter('javascript') })
+document.getElementById("filters-html-css").addEventListener("click", () => { filter('html') })
+document.getElementById("filters-react").addEventListener("click", () => { filter('react') })
+
+function filter(type) {
+
+    let cards_shown = document.getElementsByClassName("card")
+
+    if (type == 'all') {
+
+        for (let i = 0; i < cards_shown.length; i++) {
+
+            cards_shown[i].style.display = 'block'
+
+        }
+
+    } else {
+
+        for (let i = 0; i < cards_shown.length; i++) {
+
+            let cardType = cardContent[i].type
+
+            if (cardType.indexOf(type) === 0) {
+
+                cards_shown[i].style.display = 'block'
+
+            } else {
+
+                cards_shown[i].style.display = 'none'
+
+            }
+        }
+
+    }
+
+
+}
+
+
+
 
 
 
@@ -249,46 +319,6 @@ srBottom.reveal('#about-text')
 srBottom.reveal('#about-image')
 
 
-
-
-
-// Filters Skills
-document.getElementById("filters-all").addEventListener("click", () => { ativarFilters('all') })
-document.getElementById("filters-js").addEventListener("click", () => { ativarFilters('js') })
-document.getElementById("filters-html-css").addEventListener("click", () => { ativarFilters('html-css') })
-document.getElementById("filters-php").addEventListener("click", () => { ativarFilters('php') })
-
-window.onload = ativarFilters('all')
-
-function ativarFilters(botao) {
-    var buttons = document.getElementsByClassName("filters")
-
-    for (i = 0; i < 4; i++) {
-        buttons[i].childNodes[1].classList.remove("filter-checked")
-    }
-
-    document.getElementById("filters-" + botao).classList.add("filter-checked")
-}
-
-// Filters 
-function filter() {
-
-    var filterValue, input, ul, li, a, i;
-    input = document.getElementById("search");
-    filterValue = input.value.toUpperCase();
-    ul = document.getElementById("Menu");
-    li = ul.getElementsByTagName("li");
-
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
-            li[i].style.display = "";
-
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
 
 
 
