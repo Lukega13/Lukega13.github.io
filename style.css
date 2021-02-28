@@ -133,6 +133,7 @@ a {
     width: 100%;
 }
 #nav-urls ul {
+    height: 30px;
     list-style: none;
     height: 100%;
     width: 100%;
@@ -147,7 +148,7 @@ a {
     justify-content: center
 }
 #nav-urls ul li a {
-    padding: 7px 0;
+    padding: 0 0 6px 0;
     text-decoration: none;
     color: var(--color-white);
     font-size: 1.8rem;
@@ -155,13 +156,11 @@ a {
     cursor: pointer;
 }
 #nav-urls ul li a:hover {
-    padding: 4px 0;
     border-bottom: 1px solid var(--color-white);
     transition: .3s;
 }
 .nav_link-active {
     border-bottom: 1px solid var(--color-white);
-    padding: 4px 0 !important;
 }
 
 
@@ -453,6 +452,11 @@ a {
     transform: translateX(-1px);
 }
 
+#slider-controls div img:hover, 
+#slider-controls div:hover {
+    background: var(--grey31) !important;
+}
+
 
 /*Portifolio*/
 
@@ -534,6 +538,7 @@ a {
     transition: all 0.3s ease;
     user-select: none;
     cursor: pointer;
+    box-shadow: 0px 2px 7px 0px var(--grey31);
 }
   
 .card:hover {

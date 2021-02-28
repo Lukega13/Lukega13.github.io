@@ -273,6 +273,9 @@ function filter(type) {
 
             cards_shown[i].style.display = 'block'
 
+            //PROVISÓRIO
+            divCards.style.display = 'grid'
+
         }
 
     } else {
@@ -285,11 +288,16 @@ function filter(type) {
 
                 cards_shown[i].style.display = 'block'
 
+
+                //PROVISÓRIO
+                divCards.style.display = 'flex'
+
             } else {
 
                 cards_shown[i].style.display = 'none'
 
             }
+
         }
 
     }
