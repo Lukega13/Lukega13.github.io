@@ -214,7 +214,7 @@ a {
     50% {transform: translateY(-7px);}
     100% {transform: translateY(0px);}
 }
-#info-text span:hover {
+.home-name-hover {
     animation-name: letterAnimation;
     animation-duration: 0.6s;
 }
@@ -321,14 +321,19 @@ a {
     font-family: var(--font-body);
     font-size: 2.8rem;
     font-weight: 600;
-    margin: 0 0 20px 0;
 }
 #about-text h2{
     color: var(--dimGray);
-    font-family: var(--font-body);
+    font-family: var(--carousel-text);
     font-size: 2.0rem;
     font-weight: 600;
     line-height: 3.2rem;
+    margin: 15px 0 0 0;
+}
+
+#about-text h2 a {
+    color: #0d0d0f;
+    cursor: pointer;
 }
 
 

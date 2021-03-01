@@ -1,3 +1,16 @@
+//Animation of Lucas
+let home_name = document.querySelectorAll("#info-texts h1 span")
+
+for (let i = 0; i < home_name.length; i++) {
+    home_name[i].addEventListener("mouseover", () => {
+
+        home_name[i].classList.add('home-name-hover')
+
+        setTimeout(() => { home_name[i].classList.remove('home-name-hover') }, 600)
+    })
+}
+
+
 // #Skills Carousel Items
 const divCarousel = document.querySelector("div#carousel-inner");
 
@@ -407,4 +420,6 @@ function changeOpacity() {
 }
 
 window.onload = changeOpacity()
+
+
 
