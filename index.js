@@ -7,8 +7,7 @@ let carouselContents = [
     {
         carousel_id: 'carousel-item-1',
         img1: './img/html.png',
-        img2: './img/css.png',
-        title: '&lt;Html & CSS&gt;',
+        title: 'Html & CSS',
         subtitle: 'Web Development',
         subitle2: 'Front-End',
         text: 'Modern websites and applications with responsive design and great UI/UX'
@@ -16,39 +15,55 @@ let carouselContents = [
     {
         carousel_id: 'carousel-item-2',
         img1: './img/javascript.png',
-        title: '&lt;Javascript&gt;',
+        title: 'Javascript',
         subtitle: 'Web Development',
         subitle2: 'Object-Oriented',
         text: 'Development of websites and applications with dinamic informations and great UI/UX'
     },
     {
         carousel_id: 'carousel-item-3',
-        img1: './img/css.png',
-        title: '&lt;React&gt;',
+        img1: './img/react.png',
+        title: 'React JS',
         subtitle: 'Web Development',
         subitle2: 'Object-Oriented',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum tortor odio, aliquam posuere velit tincidunt non'
     },
     {
         carousel_id: 'carousel-item-4',
-        img1: './img/javascript.png',
-        title: '&lt;TypeScript&gt;',
+        img1: './img/typescript.png',
+        title: 'TypeScript',
         subtitle: 'Web Development',
         subitle2: 'Object-Oriented',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum tortor odio, aliquam posuere velit tincidunt non'
     },
     {
         carousel_id: 'carousel-item-5',
-        img1: './img/javascript.png',
-        title: '&lt;Next.js&gt;',
+        img1: './img/next-js.svg',
+        title: 'Next.js',
         subtitle: 'Web Development',
         subitle2: 'Object-Oriented',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum tortor odio, aliquam posuere velit tincidunt non'
     },
     {
         carousel_id: 'carousel-item-6',
-        img1: './img/javascript.png',
-        title: '&lt;Node.js & MySQL&gt;',
+        img1: './img/node-js.png',
+        title: 'Node.js',
+        subtitle: 'Web Development',
+        subitle2: 'Object-Oriented',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum tortor odio, aliquam posuere velit tincidunt non'
+    },
+    {
+        carousel_id: 'carousel-item-7',
+        img1: './img/mysql.png',
+        title: 'MySQL',
+        subtitle: 'Web Development',
+        subitle2: 'Object-Oriented',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum tortor odio, aliquam posuere velit tincidunt non'
+    },
+    {
+        carousel_id: 'carousel-item-8',
+        img1: './img/github-icon.png',
+        title: 'GitHub',
         subtitle: 'Web Development',
         subitle2: 'Object-Oriented',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum tortor odio, aliquam posuere velit tincidunt non'
@@ -60,12 +75,6 @@ carouselContents.map(content => {
     carouselClone.setAttribute("id", content.carousel_id);
     carouselClone.setAttribute("class", 'carousel-items');
     carouselClone.querySelector(".carousel-header .img-1").src = content.img1;
-
-    if (content.img2 === undefined) {
-        carouselClone.querySelector(".carousel-header").removeChild(carouselClone.querySelector(".carousel-header .img-2"))
-    } else {
-        carouselClone.querySelector(".carousel-header .img-2").src = content.img2;
-    }
     carouselClone.querySelector(".carousel-title h1").innerHTML = content.title;
     carouselClone.querySelector(".carousel-title h2").innerHTML = content.subtitle;
     carouselClone.querySelector(".carousel-title h3").innerHTML = content.subitle2;
@@ -138,11 +147,11 @@ function loopElements() { // get the last element and append it to the front
 let slideInterval = null
 
 function interval(flag) {
-    // if (flag) {
-    //     slideInterval = setInterval(goNext, 5000);
-    // } else {
-    //     clearInterval(slideInterval)
-    // }
+    if (flag) {
+        slideInterval = setInterval(goNext, 8500);
+    } else {
+        clearInterval(slideInterval)
+    }
 }
 interval(true)
 
