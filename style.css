@@ -332,7 +332,7 @@ a {
 }
 
 #about-text h2 a {
-    color: #0d0d0f;
+    color: var(--color-black);
     cursor: pointer;
 }
 
