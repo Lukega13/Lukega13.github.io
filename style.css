@@ -434,7 +434,7 @@ a {
 .carousel-title h2, 
 .carousel-title h3 {
     text-align: center;
-    font-size: 2.1rem;
+    font-size: 1.9rem;
     font-family: var(--font-body);
     color: var(--grey31);
     font-weight: 600;
@@ -450,7 +450,7 @@ a {
 .carousel-content h1 {
     text-align: justify;
     width: 85%;;
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     font-family: var(--carousel-text);
     color: var(--grey31);
     font-weight: 600;
@@ -478,7 +478,7 @@ a {
 }
 .slide-focus .carousel-content h1 {
     width: 90% !important;
-    font-size: 2.0rem !important;
+    font-size: 1.9rem !important;
 }
 
 

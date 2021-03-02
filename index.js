@@ -269,15 +269,34 @@ card.remove();
 
 // Filters Skills
 let buttons = document.querySelectorAll(".filters")
-
 let cards_shown = document.querySelectorAll(".card")
 
-document.getElementById("filters-all").addEventListener("click", () => { ativarFilters('all') })
-document.getElementById("filters-js").addEventListener("click", () => { ativarFilters('js') })
-document.getElementById("filters-html-css").addEventListener("click", () => { ativarFilters('html-css') })
-document.getElementById("filters-react").addEventListener("click", () => { ativarFilters('react') })
+let filtersArray = [
 
+    {
+        element: buttons[0].childNodes[1],
+        condition: 'all'
+    },
+    {
+        element: buttons[1].childNodes[1],
+        condition: 'js'
+    },
+    {
+        element: buttons[2].childNodes[1],
+        condition: 'html-css'
+    },
+    {
+        element: buttons[3].childNodes[1],
+        condition: 'react'
+    },
+
+]
+
+filtersArray.forEach(x => {
+    x.element.addEventListener("click", () => { ativarFilters(`${x.condition}`) })
+})
 window.onload = ativarFilters('all')
+
 
 function ativarFilters(filter) {
 
@@ -330,25 +349,15 @@ function ativarFilters(filter) {
 
 
 
-
-
-
 // Load animations
-const srBottom = ScrollReveal({
+const sr = ScrollReveal({
     origin: 'bottom',
     distance: '70px',
     duration: 1500,
     reset: true
 });
 
-srBottom.reveal('#carousel')
-srBottom.reveal('.cards')
-srBottom.reveal('#portifolio-filters')
-srBottom.reveal('#info-text')
-srBottom.reveal('#info-image')
-srBottom.reveal('#about-text')
-srBottom.reveal('#about-image')
-
+sr.reveal('#carousel, .cards, #portifolio-filters, #info-text, #info-image, #about-text, #about-image, #slider-controls')
 
 
 
@@ -373,8 +382,8 @@ function stickyHeader() {
 window.onload = stickyHeader()
 
 
-// Active links header
 
+// Active links header
 const navLink = document.querySelectorAll('.nav_link');
 
 // function linkAction() {
