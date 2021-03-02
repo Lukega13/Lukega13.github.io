@@ -298,7 +298,6 @@ function ativarFilters(filter) {
 
     } else {
 
-
         for (let i = 0; i < cards_shown.length; i++) {
 
             let cardType = cardContent[i].type
@@ -317,12 +316,9 @@ function ativarFilters(filter) {
 
             }
 
-            if (cards_shown[i].style.display == 'block') {
-
-
-            }
 
         }
+
 
     }
 }
