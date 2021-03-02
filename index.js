@@ -83,6 +83,7 @@ let carouselContents = [
 
 carouselContents.map(content => {
     const carouselClone = carouselContent.cloneNode(true);
+
     carouselClone.setAttribute("id", content.carousel_id);
     carouselClone.setAttribute("class", 'carousel-items');
     carouselClone.querySelector(".carousel-header .img-1").src = content.img1;
@@ -90,6 +91,7 @@ carouselContents.map(content => {
     carouselClone.querySelector(".carousel-title h2").innerHTML = content.subtitle;
     carouselClone.querySelector(".carousel-title h3").innerHTML = content.subitle2;
     carouselClone.querySelector(".carousel-content h1").innerHTML = content.text
+
     divCarousel.appendChild(carouselClone);
 });
 
@@ -167,7 +169,7 @@ function interval(flag) {
         clearInterval(slideInterval)
     }
 }
-interval(true)
+window.onload = interval(true)
 
 
 // Slide on Center
@@ -188,7 +190,7 @@ function slideFocus(way) {
 
         slides[focusedSlide].classList.add('slide-focus')
 
-    } if (way == 'prev') {
+    } else {
         focusedSlide--
 
         slides[focusedSlide + 1].classList.remove('slide-focus')
@@ -252,9 +254,11 @@ const cardContent = [
 
 cardContent.map(content => {
     const cardClone = card.cloneNode(true);
+
     cardClone.setAttribute("id", content.card_id);
     cardClone.querySelector(".card-image img").src = content.thumb;
     cardClone.querySelector(".card-image").setAttribute("href", content.url)
+
     divCards.appendChild(cardClone);
 });
 
