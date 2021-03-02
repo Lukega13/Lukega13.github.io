@@ -19,17 +19,17 @@ let carouselContents = [
         carousel_id: 'carousel-item-1',
         img1: './img/html.png',
         title: 'Html & CSS',
-        subtitle: 'Web Development',
-        subitle2: 'Front-End',
+        subtitle: 'Front-End',
+        subitle2: 'Web Development',
         text: 'Modern websites and applications with responsive design and great UI/UX'
     },
     {
         carousel_id: 'carousel-item-2',
         img1: './img/javascript.png',
         title: 'Javascript',
-        subtitle: 'App Development',
-        subitle2: 'Object-Oriented',
-        text: 'Development of websites and applications with dinamic informations'
+        subtitle: 'Object-Oriented',
+        subitle2: 'App Development',
+        text: 'Development of applications and websites with dinamic informations'
     },
     {
         carousel_id: 'carousel-item-3',
@@ -45,7 +45,7 @@ let carouselContents = [
         title: 'TypeScript',
         subtitle: 'Error Reduction',
         subitle2: 'Better Documentation',
-        text: 'Use of static type definitions that describes the shape of objects, to avoid textual typing errors during application development'
+        text: 'Static type definitions that describes the shape of objects, to avoid textual typing errors during application development'
     },
     {
         carousel_id: 'carousel-item-5',
@@ -53,7 +53,7 @@ let carouselContents = [
         title: 'Next.js',
         subtitle: 'Hybrid Static',
         subitle2: 'Server Rendering',
-        text: 'Boots React with pre-renderizating pages ate built time (SSG) or requested time (SSR), correction of SIO and many other features'
+        text: 'Boots React with pre-renderizating pages ate built time (SSG) or requested time (SSR) and correction of SIO'
     },
     {
         carousel_id: 'carousel-item-6',
@@ -75,8 +75,8 @@ let carouselContents = [
         carousel_id: 'carousel-item-8',
         img1: './img/github-icon.png',
         title: 'GitHub',
-        subtitle: 'Archive Versioning Control',
-        subitle2: 'Source Code Hosting',
+        subtitle: 'Source Code Hosting',
+        subitle2: 'Archive Versioning Control',
         text: 'Better teamwork organization, collaboration with other projects and optimization of project storage'
     }
 ]
