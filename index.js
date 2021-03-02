@@ -1,14 +1,12 @@
 //Animation of Lucas
 let home_name = document.querySelectorAll("#info-texts h1 span")
 
-for (let i = 0; i < home_name.length; i++) {
-    home_name[i].addEventListener("mouseover", () => {
+home_name.forEach(letter => letter.addEventListener("mouseover", () => {
 
-        home_name[i].classList.add('home-name-hover')
+    letter.classList.add('home-name-hover')
+    setTimeout(() => { letter.classList.remove('home-name-hover') }, 600)
+}))
 
-        setTimeout(() => { home_name[i].classList.remove('home-name-hover') }, 600)
-    })
-}
 
 
 // #Skills Carousel Items
@@ -214,14 +212,14 @@ const cardContent = [
     {
         title: "The Snake Game built with pure Javascript and some HTML & CSS",
         card_id: "card-1",
-        type: "javascript",
+        type: "js",
         thumb: "./img/snake-banner.jpg",
         url: "https://github.com/Lukega13/Snake"
     },
     {
         title: "Desvendando o CSS Grid na prática | Mayk Brito",
         card_id: "card-2",
-        type: "html",
+        type: "html-css",
         thumb: "./img/slide-4.jpg"
     },
     {
@@ -233,20 +231,20 @@ const cardContent = [
     {
         title: "O que é API? REST e RESTful? | Mayk Brito",
         card_id: "card-4",
-        type: "javascript",
+        type: "js",
         thumb: "./img/slide-2.jpg"
     },
     {
         title: "Desvendando a variável this no Javascript | Mayk Brito",
         card_id: "card-5",
-        type: "html",
+        type: "html-css",
         thumb: "./img/slide-1.jpg"
     },
     {
         title:
             "Como usar Git e Github na prática: Guia para iniciantes | Mayk Brito",
         card_id: "card-6",
-        type: "javascript",
+        type: "js",
         thumb: "./img/Perfil.jpeg"
     }
 ]
@@ -266,6 +264,10 @@ card.remove();
 
 
 // Filters Skills
+let buttons = document.querySelectorAll(".filters")
+
+let cards_shown = document.querySelectorAll(".card")
+
 document.getElementById("filters-all").addEventListener("click", () => { ativarFilters('all') })
 document.getElementById("filters-js").addEventListener("click", () => { ativarFilters('js') })
 document.getElementById("filters-html-css").addEventListener("click", () => { ativarFilters('html-css') })
@@ -273,27 +275,17 @@ document.getElementById("filters-react").addEventListener("click", () => { ativa
 
 window.onload = ativarFilters('all')
 
-function ativarFilters(botao) {
-    let buttons = document.getElementsByClassName("filters")
+function ativarFilters(filter) {
 
     for (i = 0; i < 4; i++) {
         buttons[i].childNodes[1].classList.remove("filter-checked")
     }
 
-    document.getElementById("filters-" + botao).classList.add("filter-checked")
-}
+    document.getElementById("filters-" + filter).classList.add("filter-checked")
 
-// Filters 
-document.getElementById("filters-all").addEventListener("click", () => { filter('all') })
-document.getElementById("filters-js").addEventListener("click", () => { filter('javascript') })
-document.getElementById("filters-html-css").addEventListener("click", () => { filter('html') })
-document.getElementById("filters-react").addEventListener("click", () => { filter('react') })
 
-function filter(type) {
-
-    let cards_shown = document.getElementsByClassName("card")
-
-    if (type == 'all') {
+    // Display selected items
+    if (filter == 'all') {
 
         for (let i = 0; i < cards_shown.length; i++) {
 
@@ -306,11 +298,12 @@ function filter(type) {
 
     } else {
 
+
         for (let i = 0; i < cards_shown.length; i++) {
 
             let cardType = cardContent[i].type
 
-            if (cardType.indexOf(type) === 0) {
+            if (cardType.indexOf(filter) === 0) {
 
                 cards_shown[i].style.display = 'block'
 
@@ -324,12 +317,16 @@ function filter(type) {
 
             }
 
+            if (cards_shown[i].style.display == 'block') {
+
+
+            }
+
         }
 
     }
-
-
 }
+
 
 
 
