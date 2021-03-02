@@ -130,6 +130,7 @@ function goPrev() {
         slider.appendChild(slider.firstElementChild);
 
         loopElements()
+
         interval(false)
         interval(true)
     }
@@ -138,6 +139,7 @@ function goPrev() {
 
     slideFocus('prev')
     loopElements()
+
     interval(false)
     interval(true)
 }
@@ -157,6 +159,7 @@ function loopElements() { // get the last element and append it to the front
     })
 }
 
+// Slide Interval
 let slideInterval = null
 
 function interval(flag) {
@@ -168,6 +171,8 @@ function interval(flag) {
 }
 interval(true)
 
+
+// Slide on Center
 let slides = document.querySelectorAll('.carousel-items')
 let focusedSlide = 1
 window.onload = slides[focusedSlide].classList.add('slide-focus')
@@ -201,7 +206,6 @@ function slideFocus(way) {
 
 
 // #Portifolio Cards
-
 const divCards = document.querySelector("div.cards");
 
 const card = document.querySelector("div.card");
@@ -351,9 +355,6 @@ srBottom.reveal('#about-image')
 
 
 
-
-
-
 // Header Scroll
 window.addEventListener("scroll", stickyHeader)
 
@@ -365,13 +366,13 @@ function stickyHeader() {
     if (window.pageYOffset > sticky) {
 
         header.classList.add("fixed-header")
-        content.style.marginTop = `75px`
+        content.style.marginTop = `${header.clientHeight}px`
+
     } else {
         header.classList.remove("fixed-header")
         content.style.marginTop = '0px'
     }
 }
-
 window.onload = stickyHeader()
 
 
@@ -392,9 +393,9 @@ const navLink = document.querySelectorAll('.nav_link');
 // navLink.forEach(n => n.addEventListener('click', linkAction));
 
 
-window.addEventListener('scroll', changeOpacity)
+window.addEventListener('scroll', navLinkActivation)
 
-function changeOpacity() {
+function navLinkActivation() {
 
     if (document.getElementById("info-text").style.opacity == 1) {
         navLink.forEach(n => n.classList.remove('nav_link-active'));
@@ -419,7 +420,7 @@ function changeOpacity() {
 
 }
 
-window.onload = changeOpacity()
+window.onload = navLinkActivation()
 
 
 
