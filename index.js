@@ -27,57 +27,57 @@ let carouselContents = [
         carousel_id: 'carousel-item-2',
         img1: './img/javascript.png',
         title: 'Javascript',
-        subtitle: 'Web Development',
+        subtitle: 'App Development',
         subitle2: 'Object-Oriented',
-        text: 'Development of websites and applications with dinamic informations and great UI/UX'
+        text: 'Development of websites and applications with dinamic informations'
     },
     {
         carousel_id: 'carousel-item-3',
         img1: './img/react.png',
         title: 'React JS',
-        subtitle: 'Web Development',
-        subitle2: 'Object-Oriented',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum tortor odio, aliquam posuere velit tincidunt non'
+        subtitle: 'Reactive Interfaces',
+        subitle2: 'Single Page Applications',
+        text: 'Creation of interactive UIs with more efficient updating and rendering of the application'
     },
     {
         carousel_id: 'carousel-item-4',
         img1: './img/typescript.png',
         title: 'TypeScript',
-        subtitle: 'Web Development',
-        subitle2: 'Object-Oriented',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum tortor odio, aliquam posuere velit tincidunt non'
+        subtitle: 'Error Reduction',
+        subitle2: 'Better Documentation',
+        text: 'Use of static type definitions that describes the shape of objects, to avoid textual typing errors during application development'
     },
     {
         carousel_id: 'carousel-item-5',
         img1: './img/next-js.svg',
         title: 'Next.js',
-        subtitle: 'Web Development',
-        subitle2: 'Object-Oriented',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum tortor odio, aliquam posuere velit tincidunt non'
+        subtitle: 'Hybrid Static',
+        subitle2: 'Server Rendering',
+        text: 'Boots React with pre-renderizating pages ate built time (SSG) or requested time (SSR), correction of SIO and many other features'
     },
     {
         carousel_id: 'carousel-item-6',
         img1: './img/node-js.png',
         title: 'Node.js',
-        subtitle: 'Web Development',
-        subitle2: 'Object-Oriented',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum tortor odio, aliquam posuere velit tincidunt non'
+        subtitle: 'Server-Side Javascript',
+        subitle2: 'Back-End Development',
+        text: 'Building scalable network applications, use of Javascript to develop even the application serve-side'
     },
     {
         carousel_id: 'carousel-item-7',
         img1: './img/mysql.png',
         title: 'MySQL',
-        subtitle: 'Web Development',
-        subitle2: 'Object-Oriented',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum tortor odio, aliquam posuere velit tincidunt non'
+        subtitle: 'Data storage',
+        subitle2: 'Database managment',
+        text: 'Creation of relational database for applications using the SQL language, with low cost and high flexibility'
     },
     {
         carousel_id: 'carousel-item-8',
         img1: './img/github-icon.png',
         title: 'GitHub',
-        subtitle: 'Web Development',
-        subitle2: 'Object-Oriented',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum tortor odio, aliquam posuere velit tincidunt non'
+        subtitle: 'Archive Versioning Control',
+        subitle2: 'Source Code Hosting',
+        text: 'Better teamwork organization, collaboration with other projects and optimization of project storage'
     }
 ]
 
@@ -162,7 +162,7 @@ let slideInterval = null
 
 function interval(flag) {
     if (flag) {
-        slideInterval = setInterval(goNext, 8500);
+        slideInterval = setInterval(goNext, 10000);
     } else {
         clearInterval(slideInterval)
     }
