@@ -766,6 +766,7 @@ a {
     }
 
     .sections-title {
+        height: 15vh;
         padding-top: calc(var(--header-height) + 10px);
     }
 
