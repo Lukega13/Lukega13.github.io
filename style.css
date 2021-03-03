@@ -314,7 +314,7 @@ a {
     color: var(--color-white);
 }
 #social-urls ul li a img {
-    height: 2.5rem;
+    height: 25px;
     opacity: 1;
 }
 #social-urls ul li a img:hover {
@@ -747,6 +747,8 @@ a {
         font-size: 37.5%;
     }
 
+
+    /*Home container*/
     #info-container {
         flex-direction: column;
         justify-content: space-evenly;
@@ -765,6 +767,10 @@ a {
         margin: 25px 0 0 0;
     }
 
+    #social-urls ul li a img {
+        height: 18px;
+    }
+
     #info-image {
         height: 40%;
         width: 260px;
@@ -772,7 +778,7 @@ a {
 
 
 
-
+    /*About responsive*/
     #about-content {
         flex-direction: column;
     }
