@@ -781,6 +781,7 @@ a {
 
     #about-text {
         height: auto;
+        width: 50%;
     }
 
     /*Hamburger Navbar*/
