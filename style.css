@@ -765,6 +765,10 @@ a {
         font-size: 37.5%;
     }
 
+    .sections-title {
+        padding-top: calc(var(--header-height) + 10px);
+    }
+
     #info-image {
         height: 68%;
         width: 280px;
