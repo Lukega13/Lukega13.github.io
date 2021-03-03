@@ -314,7 +314,7 @@ a {
     color: var(--color-white);
 }
 #social-urls ul li a img {
-    height: 25px;
+    height: 2.5rem;
     opacity: 1;
 }
 #social-urls ul li a img:hover {
@@ -749,15 +749,24 @@ a {
 
     #info-container {
         flex-direction: column;
+        justify-content: space-evenly;
     }
 
     #info-text {
         justify-content: space-around;
-        height: 50%;
+        height: 42%;
+    }
+
+    #info-texts h1 {
+        margin: 0 0 12px 0;
+    }
+
+    #contact-button button {
+        margin: 25px 0 0 0;
     }
 
     #info-image {
-        height: 38%;
+        height: 40%;
         width: 260px;
     }
 
