@@ -34,6 +34,7 @@ body {
 
     --header-height: 75px;
     --navbar: linear-gradient(to right,#363636, #1C1C1C);
+    --navbar-mobile: linear-gradient(to bottom,#363636, #1C1C1C);
     --background-home: radial-gradient(#C0C0C0, #A9A9A9);
     --background-carousel-items: #ffffff;
     --sliders: #c0c0c0b8;
@@ -126,7 +127,7 @@ a {
 
 
 #nav-right {
-    width: 315px;
+    width: 34.5rem;
     display: flex;
     display: -webkit-flex;
     flex-direction: column;
@@ -170,6 +171,25 @@ a {
     padding: 6px 0;
     border-bottom: 1px solid var(--color-white);
 }
+
+
+/*Hamburguer Navbar*/
+#nav-toggle {
+    display: none;
+    width: 30px;
+    height: 30px;
+    /* margin: 0 20px 0 0; */
+    cursor: pointer;
+}
+    
+#one, #two, #three {
+    background: var(--color-white);
+    height: 2px;
+    width: 100%;
+    margin: 6px auto;
+    transition-duration: 0.3s;
+}
+
 
 
 /*Home*/
@@ -303,7 +323,7 @@ a {
 }
 
 #info-image {
-    height: 90%;
+    height: 85%;
     width: 500px;
 }
 #info-image img {
@@ -388,7 +408,7 @@ a {
 }
 
 #carousel {
-    height: 260px;
+    height: 26rem;
 }
 #carousel-inner {
     height: 100%;
@@ -419,8 +439,8 @@ a {
 }
 
 .carousel-header img {
-    height: 95px;
-    max-height: 95px;
+    height: 9.5rem;
+    max-height: 9.5rem;
 }
 
 .carousel-title h1 {
@@ -454,7 +474,7 @@ a {
     font-family: var(--carousel-text);
     color: var(--grey31);
     font-weight: 600;
-    line-height: 24px;
+    line-height: 2.4rem;
 }
 
 
@@ -494,8 +514,8 @@ a {
     padding: 0 10px;
 }
 #slider-controls div {
-    width: 40px;
-    height: 40px;
+    width: 4rem;
+    height: 4rem;
     background-color: var(--sliders);
     border-radius: 50%;
     overflow: hidden;
@@ -596,6 +616,7 @@ a {
     margin: auto;
     display: grid;
     display: -ms-grid;
+    justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     grid-gap: 2.0rem;
 }
@@ -651,3 +672,183 @@ a {
     font-family: 'Times New Roman', Times, serif;
 }
 
+
+
+
+@media (max-width: 1050px) {
+
+    html {
+        font-size: 56.25%;
+    }
+
+}
+
+@media (max-width: 940px) {
+
+    html {
+        font-size: 50%;
+    }
+    :root {
+        --header-height: 70px;
+    }
+
+    #info-image {
+        height: 85%;
+        width: 450px;
+    }
+
+    #about-image {
+        height: 78%;
+        width: 375px;
+    }
+
+}
+
+@media (max-width: 850px) {
+
+    html {
+        font-size: 43.750%;
+    }
+
+    #info-image {
+        height: 85%;
+        width: 400px;
+    }
+
+    #about-image {
+        height: 76%;
+        width: 350px;
+    }
+}
+
+@media (max-width: 760px) {
+
+    html {
+        font-size: 43.750%;
+    }
+    :root {
+        --header-height: 65px;
+    }
+
+    #info-image {
+        height: 80%;
+        width: 360px;
+    }
+
+    #about-image {
+        height: 76%;
+        width: 350px;
+    }
+
+}
+
+@media (max-width: 690px) {
+
+    html {
+        font-size: 40.625%;
+    }
+
+    #info-image {
+        height: 75%;
+        width: 320px;
+    }
+
+    #about-image {
+        height: 74%;
+        width: 325px;
+    }
+
+}
+
+@media (max-width: 640px) {
+
+    html {
+        font-size: 37.5%;
+    }
+
+    #info-image {
+        height: 68%;
+        width: 280px;
+    }
+
+    #about-image {
+        height: 72%;
+        width: 300px;
+    }
+
+
+}
+
+@media (max-width: 600px) {
+    #nav-toggle {
+        display: block;
+    }
+
+    #nav-right {
+        width: auto;
+    }
+
+    #nav-urls {
+        display: none;
+    }
+
+    #nav-right.on {
+        position: absolute;
+        top:0;
+        left:0;
+        
+        width: 100vw;
+        height: 100vh;
+
+        background: var(--navbar-mobile);
+        
+        z-index: 10;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #nav-right.on #nav-urls {
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+
+    #nav-right.on #nav-toggle {
+        position: absolute;
+        right: 3vw;
+        top: 22px;
+    }
+
+    #nav-right.on #nav-toggle #one {
+        transform: rotate(45deg) translate(3px, 3px);
+    }
+
+    #nav-right.on #nav-toggle #two {
+        opacity: 0;
+    }
+
+    #nav-right.on #nav-toggle #three {
+        transform: rotate(-45deg) translate(8px, -9px);
+    }
+
+    #nav-right.on #nav-urls ul {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+    }
+
+    #nav-urls ul li {
+        height: auto;
+    }
+
+    #nav-right.on #nav-urls ul a{
+        transition-duration: 0.5s;
+        font-size: 3rem;
+        line-height: 4rem;
+        display: block;
+        
+    }
+}

@@ -59,8 +59,8 @@ let carouselContents = [
         carousel_id: 'carousel-item-6',
         img1: './img/node-js.png',
         title: 'Node.js',
-        subtitle: 'Server-Side Javascript',
-        subitle2: 'Back-End Development',
+        subtitle: 'Back-End',
+        subitle2: 'Server-Side JS',
         text: 'Building scalable network applications, use of Javascript to develop even the application serve-side'
     },
     {
@@ -75,8 +75,8 @@ let carouselContents = [
         carousel_id: 'carousel-item-8',
         img1: './img/github-icon.png',
         title: 'GitHub',
-        subtitle: 'Source Code Hosting',
-        subitle2: 'Archive Versioning Control',
+        subtitle: 'Code Hosting',
+        subitle2: 'Versioning Control',
         text: 'Better teamwork organization, collaboration with other projects and optimization of project storage'
     }
 ]
@@ -315,7 +315,7 @@ function ativarFilters(filter) {
             cards_shown[i].style.display = 'block'
 
             //PROVISÓRIO
-            divCards.style.display = 'grid'
+            // divCards.style.display = 'grid'
 
         }
 
@@ -331,7 +331,7 @@ function ativarFilters(filter) {
 
 
                 //PROVISÓRIO
-                divCards.style.display = 'flex'
+                // divCards.style.display = 'flex'
 
             } else {
 
@@ -345,8 +345,6 @@ function ativarFilters(filter) {
 
     }
 }
-
-
 
 
 // Load animations
@@ -386,19 +384,6 @@ window.onload = stickyHeader()
 // Active links header
 const navLink = document.querySelectorAll('.nav_link');
 
-// function linkAction() {
-//     /*Active link*/
-//     navLink.forEach(n => n.classList.remove('nav_link-active'));
-//     this.classList.add('nav_link-active');
-
-//     /*Remove menu mobile*/
-
-//     // const navMenu = document.getElementById('nav-menu')
-//     // navMenu.classList.remove('show')
-// }
-// navLink.forEach(n => n.addEventListener('click', linkAction));
-
-
 window.addEventListener('scroll', navLinkActivation)
 
 function navLinkActivation() {
@@ -429,4 +414,28 @@ function navLinkActivation() {
 window.onload = navLinkActivation()
 
 
+
+// Header Mobile
+
+let show = true;
+
+const menuSection = document.querySelector("#nav-right")
+const menuToggle = menuSection.querySelector("#nav-toggle")
+
+menuToggle.addEventListener("click", () => {
+
+    document.body.style.overflow = show ? "hidden" : "initial"
+
+    menuSection.classList.toggle("on", show)
+    show = !show;
+})
+
+
+navLink.forEach(n => n.addEventListener("click", () => {
+
+    document.body.style.overflow = show ? "hidden" : "initial"
+
+    menuSection.classList.remove("on")
+    show = !show;
+}))
 
