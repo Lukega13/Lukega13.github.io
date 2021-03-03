@@ -430,12 +430,18 @@ menuToggle.addEventListener("click", () => {
     show = !show;
 })
 
+// Close the Header Mobile clicking on the Urls
 
 navLink.forEach(n => n.addEventListener("click", () => {
 
     document.body.style.overflow = show ? "hidden" : "initial"
 
     menuSection.classList.remove("on")
-    show = !show;
+    show = true;
 }))
+
+
+let logo_link = document.querySelector('#logo a')
+
+window.onload = document.body.clientWidth <= 640 ? logo_link.href = '#' : ''
 

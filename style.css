@@ -117,7 +117,7 @@ a {
     justify-content: center;
     user-select: none;
 }
-#logo h1 {
+#logo a {
     color: white;
     letter-spacing: 0.3rem;
     font-family: var(--font-body);
@@ -178,7 +178,6 @@ a {
     display: none;
     width: 30px;
     height: 30px;
-    /* margin: 0 20px 0 0; */
     cursor: pointer;
 }
     
@@ -612,7 +611,7 @@ a {
 .cards {
     width: 100%;
     max-width: 1040px;
-    min-height: 340px;
+    min-height: 300px;
     margin: auto;
     display: grid;
     display: -ms-grid;
@@ -622,7 +621,7 @@ a {
 }
   
 .card {
-    height: 160px;
+    height: 140px;
     max-width: 250px;
     display: flex;
     display: -webkit-flex;
@@ -721,7 +720,7 @@ a {
     }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
 
     html {
         font-size: 43.750%;
@@ -776,10 +775,10 @@ a {
         width: 300px;
     }
 
-
-}
-
-@media (max-width: 600px) {
+    /*Hamburger Navbar*/
+    #navbar {
+        padding: 0 6vw;
+    }
     #nav-toggle {
         display: block;
     }
@@ -805,19 +804,21 @@ a {
         z-index: 10;
 
         display: flex;
+        display: -webkit-flex;
         justify-content: center;
         align-items: center;
     }
 
     #nav-right.on #nav-urls {
         display: flex;
+        display: -webkit-flex;
         height: 100%;
         align-items: center;
     }
 
     #nav-right.on #nav-toggle {
         position: absolute;
-        right: 3vw;
+        right: 6vw;
         top: 22px;
     }
 
@@ -836,8 +837,9 @@ a {
     #nav-right.on #nav-urls ul {
         text-align: center;
         display: flex;
+        display: -webkit-flex;
         flex-direction: column;
-        height: 80%;
+        height: 50%;
     }
 
     #nav-urls ul li {
@@ -851,4 +853,5 @@ a {
         display: block;
         
     }
+
 }
