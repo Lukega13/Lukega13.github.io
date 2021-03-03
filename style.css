@@ -744,30 +744,7 @@ a {
 @media (max-width: 690px) {
 
     html {
-        font-size: 40.625%;
-    }
-
-    #info-image {
-        height: 75%;
-        width: 320px;
-    }
-
-    #about-image {
-        height: 74%;
-        width: 325px;
-    }
-
-}
-
-@media (max-width: 640px) {
-
-    html {
         font-size: 37.5%;
-    }
-
-    .sections-title {
-        height: 15vh;
-        padding-top: calc(var(--header-height) + 10px);
     }
 
     #info-image {
@@ -777,7 +754,6 @@ a {
 
     #about-content {
         flex-direction: column;
-        height: 85vh;
     }
 
     #about-image {
@@ -788,10 +764,6 @@ a {
     #about-text {
         height: auto;
         width: 260px;
-    }
-
-    #skills {
-        height: 85vh;
     }
 
     #portifolio-filters {
