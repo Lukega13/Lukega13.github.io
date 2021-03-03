@@ -71,7 +71,7 @@ a {
     display: -webkit-flex;
     align-items: center;
     justify-content: center;
-    padding-top: 100px;
+    padding-top: calc(var(--header-height) + 20px);
     user-select: none;
 }
 .sections-title h1 {
@@ -781,7 +781,7 @@ a {
 
     #about-text {
         height: auto;
-        width: 64%;
+        width: 260px;
     }
 
     #portifolio-filters {
