@@ -790,6 +790,10 @@ a {
         width: 260px;
     }
 
+    #skills {
+        height: 85vh;
+    }
+
     #portifolio-filters {
         margin: 35px 0 40px 0;
         display: flex;
