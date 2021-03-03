@@ -747,10 +747,22 @@ a {
         font-size: 37.5%;
     }
 
-    #info-image {
-        height: 68%;
-        width: 280px;
+    #info-container {
+        flex-direction: column;
     }
+
+    #info-text {
+        justify-content: space-around;
+        height: 50%;
+    }
+
+    #info-image {
+        height: 38%;
+        width: 260px;
+    }
+
+
+
 
     #about-content {
         flex-direction: column;
@@ -765,6 +777,9 @@ a {
         height: auto;
         width: 260px;
     }
+
+
+
 
     #portifolio-filters {
         margin: 35px 0 40px 0;
@@ -781,6 +796,8 @@ a {
     .filters {
         margin: 0 0 10px 0;
     }
+
+    
 
     /*Hamburger Navbar*/
     #navbar {
