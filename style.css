@@ -766,7 +766,7 @@ a {
     }
 
     .sections-title {
-        height: 10vh;
+        height: 15vh;
         padding-top: calc(var(--header-height) + 10px);
     }
 
@@ -777,6 +777,7 @@ a {
 
     #about-content {
         flex-direction: column;
+        height: 85vh;
     }
 
     #about-image {
