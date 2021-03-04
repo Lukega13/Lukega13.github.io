@@ -815,6 +815,7 @@ a {
     min-height: 320px;
     margin: auto;
     display: grid;
+    display: -ms-grid;
     justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 1rem;
@@ -845,6 +846,7 @@ a {
     #portifolio-filters {
         margin: 35px 0 40px 0;
         display: flex;
+        display: -webkit-flex;
         align-items: center;
         justify-content: center;
     }

@@ -384,39 +384,35 @@ window.onload = stickyHeader()
 // Active links header
 const navLink = document.querySelectorAll('.nav_link');
 
+const x = [
+    [document.getElementById("info-text")],
+    [document.getElementById("about-text")],
+    [document.getElementById("carousel")],
+    [document.getElementById("filters")]
+]
+window.onload = document.body.clientWidth <= 690 ? x[2] = document.querySelectorAll(".carousel-items") : ''
+
 window.addEventListener('scroll', navLinkActivation)
 
 function navLinkActivation() {
 
-    if (document.getElementById("info-text").style.opacity == 1) {
-        navLink.forEach(n => n.classList.remove('nav_link-active'));
+    for (let i = 0; i < x.length; i++) {
 
-        navLink[0].classList.add('nav_link-active')
+        if (x[i][0].style.opacity != 0) {
+            navLink.forEach(n => n.classList.remove('nav_link-active'));
 
-    } if (document.getElementById("about-text").style.opacity == 1) {
-        navLink.forEach(n => n.classList.remove('nav_link-active'));
+            navLink[i].classList.add('nav_link-active')
+        }
 
-        navLink[1].classList.add('nav_link-active')
-
-    } if (document.getElementById("carousel").style.opacity == 1) {
-        navLink.forEach(n => n.classList.remove('nav_link-active'));
-
-        navLink[2].classList.add('nav_link-active')
-
-    } if (document.getElementById("portifolio-filters").style.opacity == 1) {
-        navLink.forEach(n => n.classList.remove('nav_link-active'));
-
-        navLink[3].classList.add('nav_link-active')
     }
-
 }
 
 window.onload = navLinkActivation()
 
 
 
-// Header Mobile
 
+// Header Mobile
 let show = true;
 
 const menuSection = document.querySelector("#nav-right")
