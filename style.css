@@ -678,7 +678,7 @@ a {
 
 
 /*Media Queries*/
-@media (max-width: 1050px) {
+@media screen and (max-width: 1050px) {
 
     html {
         font-size: 56.25%;
@@ -686,7 +686,7 @@ a {
 
 }
 
-@media (max-width: 940px) {
+@media screen and (max-width: 940px) {
 
     html {
         font-size: 50%;
@@ -707,7 +707,7 @@ a {
 
 }
 
-@media (max-width: 850px) {
+@media screen and (max-width: 850px) {
 
     html {
         font-size: 43.750%;
@@ -724,7 +724,7 @@ a {
     }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
     html {
         font-size: 43.750%;
@@ -745,7 +745,7 @@ a {
 
 }
 
-@media (max-width: 690px) {
+@media screen and (max-width: 690px) {
 
     html {
         font-size: 37.5%;
