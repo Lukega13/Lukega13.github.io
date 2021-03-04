@@ -795,13 +795,7 @@ a {
 
 
     /*Skills responsive*/
-    #carousel-inner {
-        width: calc(400vw) !important;
-    }
 
-    .carousel-items {
-        width: calc(100vw/2) !important;
-    }
 
 
     /*Portifolio responsive*/

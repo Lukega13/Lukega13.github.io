@@ -329,7 +329,6 @@ function ativarFilters(filter) {
 
                 cards_shown[i].style.display = 'block'
 
-
                 //PROVISÓRIO
                 // divCards.style.display = 'flex'
 
@@ -355,7 +354,7 @@ const sr = ScrollReveal({
     reset: true
 });
 
-sr.reveal('#carousel, .card, #portifolio-filters, #info-text, #info-image, #about-text, #about-image, #slider-controls')
+sr.reveal('#carousel, .cards, #portifolio-filters, #info-text, #info-image, #about-text, #about-image, #slider-controls')
 
 
 
