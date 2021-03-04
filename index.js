@@ -360,6 +360,7 @@ sr.reveal('.cards, #filters, #info-text, #info-image, #about-text, #about-image,
 window.onload = document.body.clientWidth <= 690 ? sr.reveal('.carousel-items') : sr.reveal('#carousel')
 
 
+
 // Header Scroll
 window.addEventListener("scroll", stickyHeader)
 
