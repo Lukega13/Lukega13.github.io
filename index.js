@@ -206,6 +206,8 @@ function slideFocus(way) {
 }
 
 
+
+
 // #Portifolio Cards
 const divCards = document.querySelector("div.cards");
 
@@ -213,42 +215,40 @@ const card = document.querySelector("div.card");
 
 const cardContent = [
     {
-        title: "The Snake Game built with pure Javascript and some HTML & CSS",
         card_id: "card-1",
         type: "js",
         thumb: "./img/snake-banner.jpg",
         url: "https://github.com/Lukega13/Snake"
     },
     {
-        title: "Desvendando o CSS Grid na prática | Mayk Brito",
         card_id: "card-2",
         type: "html-css",
-        thumb: "./img/slide-4.jpg"
+        thumb: "./img/slide-4.jpg",
+        url: "https://github.com/Lukega13/Snake"
     },
     {
-        title: "Array: Higher Order Functions | Mayk Brito",
         card_id: "card-3",
         type: "react",
-        thumb: "./img/slide-3.jpg"
+        thumb: "./img/slide-3.jpg",
+        url: "https://github.com/Lukega13/Snake"
     },
     {
-        title: "O que é API? REST e RESTful? | Mayk Brito",
         card_id: "card-4",
         type: "js",
-        thumb: "./img/slide-2.jpg"
+        thumb: "./img/slide-2.jpg",
+        url: "https://github.com/Lukega13/Snake"
     },
     {
-        title: "Desvendando a variável this no Javascript | Mayk Brito",
         card_id: "card-5",
         type: "html-css",
-        thumb: "./img/slide-1.jpg"
+        thumb: "./img/slide-1.jpg",
+        url: "https://github.com/Lukega13/Snake"
     },
     {
-        title:
-            "Como usar Git e Github na prática: Guia para iniciantes | Mayk Brito",
         card_id: "card-6",
         type: "js",
-        thumb: "./img/Perfil.jpeg"
+        thumb: "./img/Perfil.jpeg",
+        url: "https://github.com/Lukega13/Snake"
     }
 ]
 
