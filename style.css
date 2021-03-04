@@ -63,7 +63,6 @@ a {
 
 
 /*Group settings*/
-
 .sections-title {
     height: 20vh;
     width: 100%;
@@ -85,6 +84,7 @@ a {
     text-align: center;
     border-bottom: 2px solid var(--color-black);
 }
+
 
 
 /*Individual settings*/
@@ -173,6 +173,7 @@ a {
 }
 
 
+
 /*Hamburguer Navbar*/
 #nav-toggle {
     display: none;
@@ -192,7 +193,6 @@ a {
 
 
 /*Home*/
-
 #info-container {
     height: calc(100vh - var(--header-height));
     width: 100%;
@@ -333,8 +333,8 @@ a {
 }
 
 
-/*About*/
 
+/*About*/
 #about {
     width: 100%;
     height: auto;
@@ -393,7 +393,6 @@ a {
 
 
 /*Skills*/
-
 #skills-container {
     background-color: var(--color-white);
 }
@@ -424,6 +423,7 @@ a {
     background-color: var(--background-carousel-items);
     box-shadow: 1px 1px 7px 0px black;
 }
+
 
 
 /*Carousel items styles*/
@@ -477,6 +477,7 @@ a {
 }
 
 
+
 /*Slide with Focus*/
 .slide-focus {
     transform: scaleY(1.1);
@@ -499,6 +500,7 @@ a {
     width: 90% !important;
     font-size: 1.9rem !important;
 }
+
 
 
 /*Slide controls*/
@@ -544,8 +546,8 @@ a {
 }
 
 
-/*Portifolio*/
 
+/*Portifolio*/
 #portifolio {
     height: auto;
     width: 100%;
@@ -556,6 +558,8 @@ a {
     margin: 0 auto;
     max-width: 1040px;
 }
+
+
 
 /*Filters*/
 #portifolio-filters {
@@ -606,8 +610,8 @@ a {
 }
 
 
-/*Portifolio items*/
 
+/*Portifolio items*/
 .cards {
     width: 100%;
     max-width: 1040px;
@@ -653,8 +657,8 @@ a {
 }
 
 
-/*Footer*/
 
+/*Footer*/
 #footer {
     background-color: var(--footer-background);
     height: 60px;
@@ -673,7 +677,7 @@ a {
 
 
 
-
+/*Media Queries*/
 @media (max-width: 1050px) {
 
     html {
