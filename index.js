@@ -170,7 +170,7 @@ function interval(flag) {
     }
 }
 
-window.onload = document.body.clientWidth <= 640 ? interval(false) : interval(true)
+window.onload = document.body.clientWidth <= 690 ? interval(false) : interval(true)
 
 
 // Slide on Center
@@ -355,8 +355,9 @@ const sr = ScrollReveal({
     reset: true
 });
 
-sr.reveal('#carousel, .cards, #portifolio-filters, #info-text, #info-image, #about-text, #about-image, #slider-controls')
+sr.reveal('.cards, #filters, #info-text, #info-image, #about-text, #about-image, #slider-controls')
 
+window.onload = document.body.clientWidth <= 690 ? sr.reveal('.carousel-items') : sr.reveal('#carousel')
 
 
 // Header Scroll
@@ -444,4 +445,4 @@ navLink.forEach(n => n.addEventListener("click", () => {
 // Home link on the Logo on Mobile Screens
 let logo_link = document.querySelector('#logo a')
 
-window.onload = document.body.clientWidth <= 640 ? logo_link.href = '#' : ''
+window.onload = document.body.clientWidth <= 690 ? logo_link.href = '#' : ''
