@@ -794,8 +794,17 @@ a {
     }
 
 
+    /*Skills responsive*/
+    #carousel-inner {
+        width: calc(400vw);
+    }
+    
+    .carousel-items {
+        width: calc(100vw/2);
+    }
 
 
+    /*Portifolio responsive*/
     #portifolio-filters {
         margin: 35px 0 40px 0;
         display: flex;
