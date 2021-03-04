@@ -817,14 +817,20 @@ a {
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 2rem;
+    gap: 1rem;
+    padding: 0 6px;
     }
 
     .carousel-items {
-    width: 44vw;
+    width: 48vw;
     min-width: 180px;
     margin: 0.3rem 0;
     height: 22vh;
+    }
+
+    .carousel-header img {
+        height: 9rem;
+        width: 9rem;
     }
 
     .slide-focus {
