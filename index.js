@@ -339,9 +339,7 @@ function ativarFilters(filter) {
 
             }
 
-
         }
-
 
     }
 }
