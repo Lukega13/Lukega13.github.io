@@ -9,6 +9,7 @@ home_name.forEach(letter => letter.addEventListener("mouseover", () => {
 
 
 
+
 // #Skills Carousel Items
 const divCarousel = document.querySelector("div#carousel-inner");
 
@@ -98,7 +99,6 @@ carouselContents.map(content => {
 carouselContent.remove();
 
 
-
 // #Skills Carousel 
 let totalSlides = document.querySelectorAll(".carousel-items").length
 const carousel = document.querySelector('#carousel');
@@ -158,6 +158,7 @@ function loopElements() { // get the last element and append it to the front
         slider.style.transition = 'all ease 0.5s';
     })
 }
+
 
 // Slide Interval
 let slideInterval = null
@@ -315,7 +316,6 @@ function ativarFilters(filter) {
 
             cards_shown[i].style.display = 'block'
 
-            //PROVISÓRIO
             // divCards.style.display = 'grid'
 
         }
@@ -330,7 +330,6 @@ function ativarFilters(filter) {
 
                 cards_shown[i].style.display = 'block'
 
-                //PROVISÓRIO
                 // divCards.style.display = 'flex'
 
             } else {
@@ -345,6 +344,8 @@ function ativarFilters(filter) {
 }
 
 
+
+
 // Load animations
 const sr = ScrollReveal({
     origin: 'bottom',
@@ -356,6 +357,7 @@ const sr = ScrollReveal({
 sr.reveal('.cards, #filters, #info-text, #info-image, #about-text, #about-image, #slider-controls')
 
 window.onload = document.body.clientWidth <= 690 ? sr.reveal('.carousel-items') : sr.reveal('#carousel')
+
 
 
 
@@ -378,7 +380,6 @@ function stickyHeader() {
     }
 }
 window.onload = stickyHeader()
-
 
 
 // Active links header
@@ -426,8 +427,8 @@ menuToggle.addEventListener("click", () => {
     show = !show;
 })
 
-// Close the Header Mobile clicking on the Urls
 
+// Close the Header Mobile clicking on the Urls
 navLink.forEach(n => n.addEventListener("click", () => {
 
     document.body.style.overflow = show ? "hidden" : "initial"
