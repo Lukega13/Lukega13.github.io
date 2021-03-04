@@ -795,6 +795,43 @@ a {
 
 
     /*Skills responsive*/
+    #skills {
+        height: auto;
+        margin: 25px 0;
+    }
+
+    #slider-controls {
+        display: none;
+    }
+
+    #carousel {
+        height: auto;
+    }
+
+    #carousel-inner {
+    height: 100%;
+    width: 100vw !important;
+    max-width: 1040px;
+    min-height: 320px;
+    margin: auto;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 2rem;
+    }
+
+    .carousel-items {
+    width: 40vw;
+    min-width: 180px;
+    margin: 0.3rem 0;
+    height: 22vh;
+    }
+
+    .slide-focus {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+    transition: all 0s;
+    }
 
 
 

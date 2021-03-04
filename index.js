@@ -53,7 +53,7 @@ let carouselContents = [
         title: 'Next.js',
         subtitle: 'Hybrid Static',
         subitle2: 'Server Rendering',
-        text: 'Boots React with pre-renderizating pages ate built time (SSG) or requested time (SSR) and correction of SIO'
+        text: 'Boots React with pre-rendering pages ate built time (SSG) or requested time (SSR) and correction of SIO'
     },
     {
         carousel_id: 'carousel-item-6',
@@ -68,7 +68,7 @@ let carouselContents = [
         img1: './img/mysql.png',
         title: 'MySQL',
         subtitle: 'Data storage',
-        subitle2: 'Database managment',
+        subitle2: 'Database management',
         text: 'Creation of relational database for applications using the SQL language, with low cost and high flexibility'
     },
     {
@@ -169,7 +169,8 @@ function interval(flag) {
         clearInterval(slideInterval)
     }
 }
-window.onload = interval(true)
+
+window.onload = document.body.clientWidth <= 640 ? interval(false) : interval(true)
 
 
 // Slide on Center
@@ -440,7 +441,7 @@ navLink.forEach(n => n.addEventListener("click", () => {
 }))
 
 
+// Home link on the Logo on Mobile Screens
 let logo_link = document.querySelector('#logo a')
 
 window.onload = document.body.clientWidth <= 640 ? logo_link.href = '#' : ''
-
