@@ -441,4 +441,18 @@ navLink.forEach(n => n.addEventListener("click", () => {
 // Home link on the Logo on Mobile Screens
 let logo_link = document.querySelector('#logo a')
 
-window.onload = document.body.clientWidth <= 690 ? logo_link.href = '#' : ''
+window.addEventListener('load', () => {
+
+    document.body.clientWidth <= 690 ? logo_link.href = '#' : ''
+
+})
+
+window.addEventListener('resize', () => {
+
+    if (document.body.clientWidth <= 690) {
+        logo_link.href = '#'
+    } else {
+        logo_link.removeAttribute('href')
+    }
+
+})
