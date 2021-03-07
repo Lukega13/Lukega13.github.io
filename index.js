@@ -431,7 +431,7 @@ menuToggle.addEventListener("click", () => {
 // Close the Header Mobile clicking on the Urls
 navLink.forEach(n => n.addEventListener("click", () => {
 
-    document.body.style.overflow = show ? "hidden" : "initial"
+    document.body.style.overflow = 'initial'
 
     menuSection.classList.remove("on")
     show = true;

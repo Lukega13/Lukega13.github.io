@@ -557,6 +557,7 @@ a {
     width: 95%;
     margin: 0 auto;
     max-width: 1040px;
+    min-height: 100vh;
 }
 
 
