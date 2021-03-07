@@ -171,13 +171,10 @@ function interval(flag) {
     }
 }
 
-window.onload = document.body.clientWidth <= 690 ? interval(false) : interval(true)
-
 
 // Slide on Center
 let slides = document.querySelectorAll('.carousel-items')
 let focusedSlide = 1
-window.onload = slides[focusedSlide].classList.add('slide-focus')
 
 function slideFocus(way) {
 
@@ -297,7 +294,6 @@ let filtersArray = [
 filtersArray.forEach(x => {
     x.element.addEventListener("click", () => { ativarFilters(`${x.condition}`) })
 })
-window.onload = ativarFilters('all')
 
 
 function ativarFilters(filter) {
@@ -356,8 +352,6 @@ const sr = ScrollReveal({
 
 sr.reveal('.cards, #filters, #info-text, #info-image, #about-text, #about-image, #slider-controls')
 
-window.onload = document.body.clientWidth <= 690 ? sr.reveal('.carousel-items') : sr.reveal('#carousel')
-
 
 
 
@@ -379,27 +373,25 @@ function stickyHeader() {
         content.style.marginTop = '0px'
     }
 }
-window.onload = stickyHeader()
 
 
 // Active links header
 const navLink = document.querySelectorAll('.nav_link');
 
-const x = [
+const navReferences = [
     [document.getElementById("info-text")],
     [document.getElementById("about-text")],
     [document.getElementById("carousel")],
     [document.getElementById("filters")]
 ]
-window.onload = document.body.clientWidth <= 690 ? x[2] = document.querySelectorAll(".carousel-items") : ''
 
 window.addEventListener('scroll', navLinkActivation)
 
 function navLinkActivation() {
 
-    for (let i = 0; i < x.length; i++) {
+    for (let i = 0; i < navReferences.length; i++) {
 
-        if (x[i][0].style.opacity != 0) {
+        if (navReferences[i][0].style.opacity != 0) {
             navLink.forEach(n => n.classList.remove('nav_link-active'));
 
             navLink[i].classList.add('nav_link-active')
@@ -407,8 +399,6 @@ function navLinkActivation() {
 
     }
 }
-
-window.onload = navLinkActivation()
 
 
 
@@ -443,7 +433,24 @@ let logo_link = document.querySelector('#logo a')
 
 window.addEventListener('load', () => {
 
-    document.body.clientWidth <= 690 ? logo_link.href = '#' : ''
+    navLinkActivation()
+    stickyHeader()
+    ativarFilters('all')
+    slides[focusedSlide].classList.add('slide-focus')
+
+    if (document.body.clientWidth <= 690) {
+
+        logo_link.href = '#'
+        interval(false)
+        sr.reveal('.carousel-items')
+        navReferences[2] = document.querySelectorAll(".carousel-items")
+
+    } else {
+
+        interval(true)
+        sr.reveal('#carousel')
+
+    }
 
 })
 
