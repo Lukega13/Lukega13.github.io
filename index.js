@@ -214,8 +214,8 @@ const card = document.querySelector("div.card");
 const cardContent = [
     {
         card_id: "card-1",
-        type: "js",
-        thumb: "./img/snake-banner.jpg",
+        type: "html",
+        thumb: "./img/slide-2.jpg",
         url: "https://github.com/Lukega13/Snake"
     },
     {
@@ -233,20 +233,20 @@ const cardContent = [
     {
         card_id: "card-4",
         type: "js",
-        thumb: "./img/slide-2.jpg",
+        thumb: "./img/snake-banner.jpg",
         url: "https://github.com/Lukega13/Snake"
     },
     {
         card_id: "card-5",
-        type: "html-css",
-        thumb: "./img/slide-1.jpg",
-        url: "https://github.com/Lukega13/Snake"
+        type: "js",
+        thumb: "./img/mata-mosquito.png",
+        url: "https://github.com/Lukega13/Mosquito-Killer"
     },
     {
         card_id: "card-6",
         type: "js",
-        thumb: "./img/Perfil.jpeg",
-        url: "https://github.com/Lukega13/Snake"
+        thumb: "./img/jogo-da-velha.jpg",
+        url: "https://github.com/Lukega13/Hash-Game"
     }
 ]
 
